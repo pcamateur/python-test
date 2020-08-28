@@ -30,24 +30,24 @@ prb = list(zip(rb, bb))
 dic1 = dict(zip(dates, prb))
 dic2 = dict(zip(times, dic1.items()))
 
-print(times, rb, bb, dates)
-# print('----------')
-# print(prb)
-# print(dic1)
-print(dic2)
-
 print('1.Times\n2.Dates')
 fv1 = input('Please type the Number:')
 if fv1 == '1':
     fv2 = input('Please input the Times:')
     print(dic2[fv2])
     print('Times is:', fv2)
-    print('---------------------------')
-    print('Bingo is:', dic2[fv2][1][0][0], '-', dic2[fv2][1][0][1], '-', dic2[fv2][1][0][2], '-', dic2[fv2][1][0][3], '-', dic2[fv2][1][0][4], '-', dic2[fv2][1][0][5], '/', dic2[fv2][1][1])
+    print('-------------------------------------------')
+    bl1 = []
+    for isa1 in dic2[fv2][1][0]:
+        bl1.append(isa1)
+    print('Bingo is:', ' - '.join(bl1), '/', dic2[fv2][1][1])
+    print('Bingo is:', dic2[fv2][1][0][0], '-', dic2[fv2][1][0][1], '-', dic2[fv2][1][0][2], '-', dic2[fv2][1][0][3],
+          '-', dic2[fv2][1][0][4], '-', dic2[fv2][1][0][5], '/', dic2[fv2][1][1])
 else:
     dic3 = dict(zip(dates, times))
     fv3 = input("Please type the Date(format is YYYY-MM-DD):")
-    print(dic2[dic3[fv3]])
+    print(dic2[dic3[fv3]][0])
+    print('-------------------------------------------')
     bl = []
     for isa in dic2[dic3[fv3]][1][0]:
         bl.append(isa)
