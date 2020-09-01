@@ -35,18 +35,18 @@ fv1 = input('Please type the Number:')
 if fv1 == '1':
     fv2 = input('Please input the Times:')
     print(dic2[fv2])
-    print('Times is:', fv2)
+    print('Times is:', fv2,'Date is:', dic2[fv2][0])
     print('-------------------------------------------')
     bl1 = []
     for isa1 in dic2[fv2][1][0]:
         bl1.append(isa1)
     print('Bingo is:', ' - '.join(bl1), '/', dic2[fv2][1][1])
-    print('Bingo is:', dic2[fv2][1][0][0], '-', dic2[fv2][1][0][1], '-', dic2[fv2][1][0][2], '-', dic2[fv2][1][0][3],
-          '-', dic2[fv2][1][0][4], '-', dic2[fv2][1][0][5], '/', dic2[fv2][1][1])
+    # print('Bingo is:', dic2[fv2][1][0][0], '-', dic2[fv2][1][0][1], '-', dic2[fv2][1][0][2], '-', dic2[fv2][1][0][3],
+    #       '-', dic2[fv2][1][0][4], '-', dic2[fv2][1][0][5], '/', dic2[fv2][1][1])
 else:
     dic3 = dict(zip(dates, times))
     fv3 = input("Please type the Date(format is YYYY-MM-DD):")
-    print(dic2[dic3[fv3]][0])
+    print('Times is:', dic2[dic3[fv3]][0], 'Date is:', fv3)
     print('-------------------------------------------')
     bl = []
     for isa in dic2[dic3[fv3]][1][0]:
