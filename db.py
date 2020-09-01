@@ -35,7 +35,7 @@ fv1 = input('Please type the Number:')
 if fv1 == '1':
     fv2 = input('Please input the Times:')
     print(dic2[fv2])
-    print('Times is:', fv2,'Date is:', dic2[fv2][0])
+    print('Times is:', fv2, 'Date is:', dic2[fv2][0])
     print('-------------------------------------------')
     bl1 = []
     for isa1 in dic2[fv2][1][0]:
