@@ -43,7 +43,7 @@ if fv1 == '1':
     print('Bingo is:', ' - '.join(bl1), '/', dic2[fv2][1][1])
     # print('Bingo is:', dic2[fv2][1][0][0], '-', dic2[fv2][1][0][1], '-', dic2[fv2][1][0][2], '-', dic2[fv2][1][0][3],
     #       '-', dic2[fv2][1][0][4], '-', dic2[fv2][1][0][5], '/', dic2[fv2][1][1])
-else:
+elif fv1 == '2':
     dic3 = dict(zip(dates, times))
     fv3 = input("Please type the Date(format is YYYY-MM-DD):")
     print('Times is:', dic2[dic3[fv3]][0], 'Date is:', fv3)
@@ -52,3 +52,5 @@ else:
     for isa in dic2[dic3[fv3]][1][0]:
         bl.append(isa)
     print('Bingo is:', ' - '.join(bl), '/', dic2[dic3[fv3]][1][1])
+else:
+    print('Error type!Time to say Goodbye~')
