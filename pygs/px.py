@@ -10,7 +10,7 @@ def random():
 
 def qs(ls):
     if len(ls) < 2:
-        return arr
+        return ls 
     else:
         p = ls[0]
         l = [i for i in ls[1:] if i <= p]
@@ -18,5 +18,5 @@ def qs(ls):
         return qs(l) + [p] + qs(g)
 
 
-print(qs(radom()))
+print(qs(random()))
 
