@@ -3,7 +3,7 @@ from lxml import etree
 import matplotlib.pyplot as plt
 from pandas import Series
 
-url = "http://datachart.500.com/ssq/history/newinc/history.php?start=00001&end=19099"
+url = "http://datachart.500.com/ssq/history/newinc/history.php?start=20100&end=20129"
 response = requests.get(url)
 response = response.text
 selector = etree.HTML(response)

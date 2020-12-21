@@ -1,8 +1,5 @@
 import random
-
 num = random.randint(0, 999)
-
-
 def rn(n):
     if num < 100:
         if num < 10:
@@ -19,7 +16,6 @@ def rn(n):
         return ns1
     else:
         print('Values is Error!')
-
 
 ns = rn(num)
 
@@ -63,7 +59,6 @@ while inum != "exit" and ns != inum:
                 print(val)
                 dic[n] = list((inum, val))
 
-    
     else:
         pass
     inum = str(input('Please input a digit,Thanks!If you want quit,please input "exit":'))
