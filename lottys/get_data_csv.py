@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup as bs
+import csv
 
 
 def get_html(url):
@@ -55,8 +56,26 @@ def main():
     b = get_values(a, times, rb, bb, dates)
     list_dic(b[0], b[1], b[2], b[3])
 
-    print(list_dic(b[0], b[1], b[2], b[3])[0])
+    c = list_dic(b[0], b[1], b[2], b[3])
+
+    ld = c[0]
+
+    headers = []
+
+    for keysa in ld.keys():
+        headers.append(keysa)
+
+    # print(headers)
+    # print(ld)
+    # print(list_dic(b[0], b[1], b[2], b[3])[0])
     # print(list_dic[1][0])
+
+    
+
+    with open("a.csv", mode = 'w', encoding = 'utf-8-sig', newline = '') as f:
+        writer = csv.DictWriter(f, headers)
+
+        writer.writerow(ld)
 
 
 
