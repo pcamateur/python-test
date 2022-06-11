@@ -38,12 +38,19 @@ def get_values(datas, times, rb, bb, dates):
     return times, rb, bb, dates
 
 
-def list_dic(times, rb, bb, dates):
-    prb = list(zip(rb, bb))
-    dic1 = dict(zip(dates, prb))
-    dic2 = dict(zip(times, dic1.items()))
-    dic3 = dict(zip(dates, times))
-    return dic2, dic3
+# def list_dic(times, rb, bb, dates):
+#     prb = list(zip(rb, bb))
+#     dic1 = dict(zip(dates, prb))
+#     dic2 = dict(zip(times, dic1.items()))
+#     dic3 = dict(zip(dates, times))
+#     return dic2, dic3
+
+
+def list_dic(times, rb, bb,dates):
+    list_a = list()
+    for xa in range(len(times)):
+        list_a.append({'times':times[xa],'rb':rb[xa],'bb':bb[xa],'dates':dates[xa]})
+    return list_a
 
 
 
@@ -54,28 +61,14 @@ def main():
     a = get_data(url)
     get_values(a, times, rb, bb, dates)
     b = get_values(a, times, rb, bb, dates)
-    list_dic(b[0], b[1], b[2], b[3])
-
-    c = list_dic(b[0], b[1], b[2], b[3])
-
-    ld = c[0]
-
-    headers = []
-
-    for keysa in ld.keys():
-        headers.append(keysa)
-
-    # print(headers)
-    # print(ld)
-    # print(list_dic(b[0], b[1], b[2], b[3])[0])
-    # print(list_dic[1][0])
-
+   
+    ld = list_dic(b[0], b[1], b[2], b[3])
     
-
+    headers = ['times', 'rb', 'bb', 'dates']
     with open("a.csv", mode = 'w', encoding = 'utf-8-sig', newline = '') as f:
         writer = csv.DictWriter(f, headers)
 
-        writer.writerow(ld)
+        writer.writerows(ld)
 
 
 
