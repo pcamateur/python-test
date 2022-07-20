@@ -68,9 +68,9 @@ def main():
     b = get_values(a, times, rb1, rb2, rb3, rb4, rb5, rb6, bb, dates)
    
     ld = list_dic(b[0], b[1], b[2], b[3], b[4], b[5], b[6], b[7], b[8])
-    
+    # print(ld)
     headers = ['times', 'rb1', 'rb2','rb3','rb4','rb5','rb6', 'bb', 'dates']
-    with open("c.csv", mode = 'w', encoding = 'utf-8-sig', newline = '') as f:
+    with open("d.csv", mode = 'w', encoding = 'utf-8-sig', newline = '') as f:
         writer = csv.DictWriter(f, headers)
 
         writer.writerows(ld)
