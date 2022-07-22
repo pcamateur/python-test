@@ -1,0 +1,54 @@
+{
+    "name": "medz/gb-t-2260",
+    "keywords": [
+        "GB",
+        "GB-T",
+        "GB-T 2260",
+        "2260",
+        "China"
+    ],
+    "description": "中华人民共和国国家标准 GB/T 2260 行政区划代码",
+    "homepage": "https://github.com/medz/gb-t-2260",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Seven Du",
+            "email": "shiweidu@outlook.com",
+            "homepage": "https://github.com/medz",
+            "role": "The tool source developer"
+        }
+    ],
+    "support": {
+        "docs": "https://github.com/medz/gb-t-2260#readme",
+        "issues": "https://github.com/medz/gb-t-2260/issues",
+        "source": "https://github.com/medz/gb-t-2260.git"
+    },
+    "autoload": {
+        "psr-4": {
+            "Medz\\GBT2260\\": "php"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Medz\\GBT2260\\ResourceBuilder\\": "resource-builder"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "config": {
+        "preferred-install": "dist",
+        "platform": {
+            "php": "7.1.3"
+        }
+    },
+    "scripts": {
+        "build": "@php resource-builder/bin.php"
+    },
+    "require": {
+        "php": ">=7.1.3"
+    },
+    "require-dev": {
+        "guzzlehttp/guzzle": "^6.5"
+    }
+}
