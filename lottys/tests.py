@@ -1,5 +1,4 @@
-red_balls = [int(ball) for ball in input("请输入红球号码（用空格分隔）：").split()]
-blue_ball = int(input("请输入蓝球号码："))
-
-print(red_balls)
-print(blue_ball)
+source_data = ["07", "08", "11", "14", "25", "31"]
+input_data = ["07", "09", "11", "15", "25", "32"]
+check_bingo = [ball for ball in input_data if ball in source_data]
+print(check_bingo)
