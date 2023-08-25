@@ -62,7 +62,8 @@ from bs4 import BeautifulSoup as bs
 # 检查该模块是否作为独立程序运行。
 # 如果是，则调用 main() 函数开始执行程序逻辑。
 
-# 注意：这段代码使用了第三方库 requests 和 BeautifulSoup。requests 用于发送 HTTP 请求获取网页内容，BeautifulSoup 用于解析 HTML 文档。请确保已经安装了这两个库。
+# 注意：这段代码使用了第三方库 requests 2.27.1 和 BeautifulSoup 4.11.1。requests 用于发送 HTTP 请求获取网页内容，BeautifulSoup 用于解析 HTML 文档。请确保已经安装了这两个库。
+# Python 3.9.12
 
 
 def get_html(url):
