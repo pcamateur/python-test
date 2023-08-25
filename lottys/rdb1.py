@@ -63,7 +63,7 @@ def query_by_times_and_dates(bl, times, rb, bb, dates):
         ld = list_dic(times, rb, bb, dates)[1]
         ld0 = list_dic(times, rb, bb, dates)[0]
         ld2 = ld[fv2]
-        print('Times is:', ld0[ld2][0], 'Date is:', fv2)
+        print('Times is:', ld2, 'Date is:', fv2)
         print('-------------------------------------------')
         for isa in ld0[ld2][1][0]:
             bl.append(isa)
